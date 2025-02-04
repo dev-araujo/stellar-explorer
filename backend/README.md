@@ -19,7 +19,7 @@ Esta API fornece endpoints para interagir com a rede Stellar, permitindo recuper
 **Exemplo de Requisição:**
 
 ```
-GET /api/accounts/GDUKMGUGDZQK6EDROP4JBDSZQ5NZXFJSRQP6IH3FBQKHETSUUESXASJA
+GET /api/accounts/GD6ZSAA63VFE6DHXPVNFMGS2BIMCC4M3MUSTRUQOFHJJTFHSKVI53CH5
 ```
 
 **Resposta de Sucesso (200 OK):**
@@ -62,7 +62,7 @@ GET /api/accounts/GDUKMGUGDZQK6EDROP4JBDSZQ5NZXFJSRQP6IH3FBQKHETSUUESXASJA
 **Exemplo de Requisição:**
 
 ```
-GET /api/balance/GDUKMGUGDZQK6EDROP4JBDSZQ5NZXFJSRQP6IH3FBQKHETSUUESXASJA/balance
+GET /api/balance/GD6ZSAA63VFE6DHXPVNFMGS2BIMCC4M3MUSTRUQOFHJJTFHSKVI53CH5
 ```
 
 **Resposta de Sucesso (200 OK):**
@@ -99,7 +99,7 @@ GET /api/balance/GDUKMGUGDZQK6EDROP4JBDSZQ5NZXFJSRQP6IH3FBQKHETSUUESXASJA/balanc
 **Exemplo de Requisição:**
 
 ```
-GET /api/transactions/75a99d75275756737559d4d3d7d98f6f7559d757d7598f6d9d7598f6d759d75
+GET /api/transactions/4be019e2bf48f5093e5ffc210140c8ce7afa0215521a9b51bba01f38cfde5378
 ```
 
 **Resposta de Sucesso (200 OK):**
@@ -136,7 +136,7 @@ GET /api/transactions/75a99d75275756737559d4d3d7d98f6f7559d757d7598f6d9d7598f6d7
 **Exemplo de Requisição:**
 
 ```
-GET /api/blocks/12345
+GET /api/blocks/10
 ```
 
 **Resposta de Sucesso (200 OK):**
