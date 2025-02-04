@@ -1,11 +1,15 @@
+// app.ts
 import cors from "cors";
 import express from "express";
-import stellarRoutes from "./routes/stellar.routes";
+import router from "./routes/stellar.routes";
 
 const app = express();
-
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 app.use(express.json());
-app.use("/api", stellarRoutes);
+app.use("/api", router);
 
 export default app;

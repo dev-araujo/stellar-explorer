@@ -13,5 +13,5 @@ export const errorHandler = (
 };
 
 export const errorMessages = (path: string, error: any): string => {
-  return `Erro ao consultar ${path} : {status: ${error.response.status}, data: ${error.response.data}}`;
+  return `Erro ao consultar ${path} : {status: ${error.response?.status}, data: ${error.response?.data}}`;
 };

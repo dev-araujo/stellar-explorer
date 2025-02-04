@@ -1,4 +1,5 @@
 import {
+  getAccountBalance,
   getAccountDetails,
   getLedgerDetails,
   getTransactionDetails,
@@ -9,7 +10,9 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/accounts/:pubKey", getAccountDetails);
+router.get("/balance/:pubKey", getAccountBalance);
+
 router.get("/transactions/:hash", getTransactionDetails);
-router.get("/ledgers/:ledgerSeq", getLedgerDetails);
+router.get("/blocks/:seq", getLedgerDetails);
 
 export default router;
