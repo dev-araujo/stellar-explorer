@@ -18,7 +18,7 @@ export default function Home() {
     setLedger(data?.records);
   }
   // if (isLoading) return <p>Loading...</p>;
-  if (error) return <p className='text-red-500'>Error: {error.message}</p>;
+  // if (error) return <p className='text-red-500'>Error: {error.message}</p>;
 
   const LedgerUpdates = () => {
     // setLedger(data?.records.reverse());
@@ -40,6 +40,8 @@ export default function Home() {
         eventSource.close();
       };
     }, []);
+
+    if (error) return <p className='text-red-500'>Error: {error.message}</p>;
 
     return (
       <div>
