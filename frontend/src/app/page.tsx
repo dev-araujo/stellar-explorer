@@ -1,5 +1,5 @@
 "use client";
-import Header from "@/components/Header/header";
+
 import SearchBar from "@/components/SearchBar/searchBar";
 import { Card } from "@/components/ui/card";
 import { createEventSource, fetchLimitLedger } from "@/lib/stellar";

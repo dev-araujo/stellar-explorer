@@ -1,21 +1,23 @@
 import { Horizon } from '@stellar/stellar-sdk';
 
-// const HORIZON_URL = 'http://136.248.68.75:8000'; // Custom Horizon instance
-const HORIZON_URL = 'https://horizon.stellar.org'; // Official Horizon instance
-const server = new Horizon.Server(HORIZON_URL, { allowHttp: true });
+const URL = process.env.NEXT_PUBLIC_HORIZON_URL;
+if (!URL) {
+  throw new Error('NEXT_PUBLIC_HORIZON_URL is not defined');
+}
+const server = new Horizon.Server(URL, { allowHttp: true });
 
 export const fetchAccount = async (accountId: string) => {
   return server.loadAccount(accountId);
 }
 
 export const fetchTransaction = async (txId: string) => {
-  const res = await fetch(`${HORIZON_URL}/transactions/${txId}`);
+  const res = await fetch(`${URL}/transactions/${txId}`);
   if (!res.ok) throw new Error('Transaction not found');
   return res.json();
 };
 
 export const fetchLedger = async (ledgerId: string) => {
-  const res = await fetch(`${HORIZON_URL}/ledgers/${ledgerId}`);
+  const res = await fetch(`${URL}/ledgers/${ledgerId}`);
   if (!res.ok) throw new Error('Ledger not found');
   return res.json();
 };
@@ -25,7 +27,7 @@ export const fetchLimitLedger = async () => {
 }
 
 export const createEventSource = () => {
-  const eventSource = new EventSource(`${HORIZON_URL}/ledgers?order=asc&cursor=now&limit=5`);
+  const eventSource = new EventSource(`${URL}/ledgers?order=asc&cursor=now&limit=5`);
 
   return eventSource;
 };
