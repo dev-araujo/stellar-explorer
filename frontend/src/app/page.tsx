@@ -87,7 +87,6 @@ export default function Home() {
 
   return (
     <div className='bg-transparent'>
-      <Header />
       <SearchBar />
       <LedgerUpdates />
     </div>

@@ -14,8 +14,6 @@ export default function TransactionPage() {
     queryFn: () => fetchTransaction(id as string),
   });
 
-  console.log(data);
-
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p className='text-red-500'>Error: {error.message}</p>;
 

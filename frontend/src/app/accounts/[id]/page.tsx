@@ -17,8 +17,6 @@ export default function AccountPage() {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p className='text-red-500'>Error: {error.message}</p>;
 
-  console.log(data);
-
   const handleAssetType = (assetType: string, assetCode: string) => {
     if (assetType === "native") {
       return "XLM";
